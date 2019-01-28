@@ -9,8 +9,8 @@ WORKDIR /go/src/github.com/minio/
 
 RUN  \
      apk add --no-cache git && \
-     go get -v -d github.com/minio/minio && \
-     cd /go/src/github.com/minio/minio && \
+     go get -v -d github.com/culibraries/libbox-minio && \
+     cd /go/src/github.com/culibraries/libbox-minio && \
      go install -v -ldflags "$(go run buildscripts/gen-ldflags.go)"
 
 FROM alpine:3.7
